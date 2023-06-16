@@ -55,6 +55,16 @@ docker images ls
 docker images -q
 ```
 
+**List all dangling images**
+```
+docker images -f dangling=true -q
+```
+
+**Remove all dangling images**
+```
+docker rmi $(docker images -f dangling=true -q)
+```
+
 ## Docker container logs
 
 activity logs from a container 
